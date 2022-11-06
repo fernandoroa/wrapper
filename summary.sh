@@ -35,7 +35,7 @@ perl wrapper.pl < long_lines.R 100 \#\\s \#\\s ", "
 
 Summary one after the other:
 LENGTH=80
-#                   INPUTFILE    length  filter            prefix  separator  output file
+#                 INPUTFILE    length  filter            prefix  separator    output file
 # CODE
 perl wrapper.pl < long_lines.R $LENGTH ^\(\(?\!\#\).\)*$ ""      ", "       > results__1.R
 # COMMENTS #'
@@ -47,7 +47,7 @@ perl wrapper.pl < results__2.R $LENGTH \#\\s             \#\\s   " "        > re
 
 Independent summary: (no output_file)
 LENGTH=100
-#                   INPUTFILE    length  filter            prefix  separator
+#                 INPUTFILE    length  filter            prefix  separator
 # CODE
 perl wrapper.pl < long_lines.R $LENGTH ^\(\(?\!\#\).\)*$ ""      ", "
 # COMMENTS #'
