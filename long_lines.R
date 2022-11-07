@@ -2,10 +2,10 @@ iris %>%
   group_by(Species) %>%
   summarise(Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), Species = n_distinct(Species))
 
-#' short comment, do nothing starting in #'
+#' short comment, do nothing starting in #singlequote
 #' long starting with #'  line  big chunk, line  big chunk HERE line  big chunk line  big chunk line long starting, with #' long starting with #'
 
-#' ruler10_234567_20_234567_30_234567_40_234567_50_234567_60_234567_70_234567_80_234567_90_23456_100
+#' ruler10_234567_20_234567_30_234567_40_234567_50_234567_60_234567_70_234567_80_234567_90_23456_100_234567_10_234567_20_234567_30_234567_40
 #'
 #' short comment, previous line do nothing
 
@@ -18,3 +18,9 @@ code(arg1, arg2) # code and then comments then comments then comments then comme
 BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line
 #' BIG comment line no commas line  BIG comment line no commas line  BIG comment line no commas line  BIG comment line no commas line  BIG comment line no commas line
 BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line
+
+    capa = function(Z5_QN = NULL, QN_Title = NULL, QN_Status = NULL, CAPA_Effectiveness = NULL, Batch_Number = NULL, Material_Number = NULL, Material_Description = NULL,
+                    Site_Code = NULL, Site = NULL, Notification_Date = NULL, Completion_Date = NULL, Reference_Notification = NULL, size = NULL) {
+
+# if word present, see summary.sh
+LongWord_LongWord12345 <- if (is.null(LongWord_LongWord12345)) replicate(size, self$LongWord_LongWord12345()) else LongWord_LongWord12345
