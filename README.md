@@ -2,38 +2,29 @@
 title: "Wrapper"
 author: "Fernando Roa"
 date: "November, 2022"
-output: 
-  html_document:
-    keep_md: yes
 ---
-
-<style type="text/css">
-pre{
-  font-size: 10px;
-}
-</style>
 
 ##### Some Concatenated examples - printing to file:
 
 ```
 LENGTH=80
-#                 INPUTFILE    length  filter                   prefix  split_in  second_filter       output file
+#                 INPUTFILE    length  filter                   prefix  split second_filter        output file
 # 5 CODE # don't modify lines when "if" word present
 # and # present !!!
-perl wrapper.pl < long_lines.R $LENGTH ^^\(\(?\!\\bif\\b\).\)*$ ""      ", "      ^\(\(?\!\#\).\)*$  > results__1.R
+perl wrapper.pl < long_lines.R $LENGTH ^^\(\(?\!\\bif\\b\).\)*$ ""      ", "  ^\(\(?\!\#\).\)*$  > results__1.R
 
 # 2 COMMENTS #'
-perl wrapper.pl < results__1.R $LENGTH ^\#\'\\s                 \#\'\\s " "                          > results__2.R
+perl wrapper.pl < results__1.R $LENGTH ^\#\'\\s                 \#\'\\s " "                      > results__2.R
 
 # 4 COMMENTS #
-perl wrapper.pl < results__2.R $LENGTH \#\\s                    \#\\s   " "                          > final.R
+perl wrapper.pl < results__2.R $LENGTH \#\\s                    \#\\s   " "                      > final.R
 ```
 <br>  
 
 ##### Some examples - console
 ```
 LENGTH=100
-#                 INPUTFILE    length  filter                  prefix  split_in  second_filter
+#                 INPUTFILE    length  filter                  prefix  split  second_filter
 # 1 CODE
 perl wrapper.pl < long_lines.R $LENGTH ^\(\(?\!\#\).\)*$       ""      ", "
 
@@ -44,7 +35,7 @@ perl wrapper.pl < long_lines.R $LENGTH ^\#\'\\s                \#\'\\s " "
 perl wrapper.pl < long_lines.R $LENGTH \#\\s                   \#\\s   " "
 
 # 5 CODE # don't modify lines when "if" word present !!!
-perl wrapper.pl < long_lines.R $LENGTH ^\(\(?\!\\bif\\b\).\)*$ ""      ", "      ^\(\(?\!\#\).\)*$
+perl wrapper.pl < long_lines.R $LENGTH ^\(\(?\!\\bif\\b\).\)*$ ""      ", "   ^\(\(?\!\#\).\)*$
 ```
 
 Numbers corresponds to examples in summary.sh
