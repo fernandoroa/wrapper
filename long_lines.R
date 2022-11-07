@@ -19,8 +19,8 @@ BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG 
 #' BIG comment line no commas line  BIG comment line no commas line  BIG comment line no commas line  BIG comment line no commas line  BIG comment line no commas line
 BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line
 
-    capa = function(Z5_QN = NULL, QN_Title = NULL, QN_Status = NULL, CAPA_Effectiveness = NULL, Batch_Number = NULL, Material_Number = NULL, Material_Description = NULL,
-                    Site_Code = NULL, Site = NULL, Notification_Date = NULL, Completion_Date = NULL, Reference_Notification = NULL, size = NULL) {
+    method = function(arg_ag = NULL, arg_arg_a = NULL, arg_arg_ar = NULL, arg_arg_a_arg = NULL, argargaargarga = NULL, argarga_argarga = NULL,
+                    arg_arg_a = NULL, arg_ar = NULL, arg_arg_arg_arg_a = NULL, arg_arg_arg_arg_a = NULL, arg_arg_arg_arg_arg_arg_arg_a = NULL, arg = NULL) {
 
 # if word present, see summary.sh
 LongWord_LongWord12345 <- if (is.null(LongWord_LongWord12345)) replicate(size, self$LongWord_LongWord12345()) else LongWord_LongWord12345
