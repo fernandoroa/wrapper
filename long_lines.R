@@ -15,12 +15,13 @@ iris %>%
 
 code(arg1, arg2) # code and then comments then comments then comments then comments then, comments then comments then comments then comments
 
-BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line
+# BIG no commas
 #' BIG comment line no commas line  BIG comment line no commas line  BIG comment line no commas line  BIG comment line no commas line  BIG comment line no commas line
-BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line
+# BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line BIG no commas line
 
-    method = function(arg_ag = NULL, arg_arg_a = NULL, arg_arg_ar = NULL, arg_arg_a_arg = NULL, argargaargarga = NULL, argarga_argarga = NULL,
-                    arg_arg_a = NULL, arg_ar = NULL, arg_arg_arg_arg_a = NULL, arg_arg_arg_arg_a = NULL, arg_arg_arg_arg_arg_arg_arg_a = NULL, arg = NULL) {
+method <- function(arg_ag = NULL, arg_arg_a = NULL, arg_arg_ar = NULL, arg_arg_a_arg = NULL, argargaargarga = NULL, argarga_argarga = NULL,
+                   arg_arg_b = NULL, arg_ar = NULL, arg_arg_arg_arg_b = NULL, arg_arg_arg_arg_a = NULL, arg_arg_arg_arg_arg_arg_arg_a = NULL, arg = NULL) {
+}
 
 # if word present, see summary.sh
-LongWord_LongWord12345 <- if (is.null(LongWord_LongWord12345)) replicate(size, self$LongWord_LongWord12345()) else LongWord_LongWord12345
+LongWord_LongWord12346 <- if (is.null(LongWord_LongWord12345)) replicate(size, self$LongWord_LongWord12345()) else "LongWord_LongWord12345"
