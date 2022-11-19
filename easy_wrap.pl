@@ -5,7 +5,6 @@ $hashtag = "\#";
 $hashtag_break_point = " ";
 foreach my $line ( <STDIN> ) {
   ($prefix, $text) = ($line =~ /^(\W+)?(.*)/);
-  $check_fun = 0;
   $linebreak_prefix = "\n$prefix";  # \n is linebreak
   $break_point = ", ";
   $max_length = $max_length_o;
@@ -29,7 +28,6 @@ foreach my $line ( <STDIN> ) {
       if ($line =~ "function\\(") {
         ($fun_prefix, $text2) = ($line =~ /(.*?function)(.*)/);
         $fun_prefix_length = length($fun_prefix) + 1;
-        $check_fun = 1;
         $spaces = " " x $fun_prefix_length;
         $linebreak_prefix = "\n$prefix$spaces";  # \n is linebreak
       }
