@@ -1,6 +1,7 @@
 #### Easy wrapper, a one-liner
 
--   Characteristics of easy wrap
+Characteristics of easy wrap:
+
 -   splits comment lines in space
 -   splits code lines in comma
 -   ignore lines with “if” when “{” absent
