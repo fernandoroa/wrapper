@@ -1,17 +1,8 @@
 ---
-title: "Wrapper"
+title: "Perl Wrapper for R code"
 author: "Fernando Roa"
 date: "November, 2022"
-output: 
-  html_document:
-    keep_md: yes
 ---
-
-<style type="text/css">
-pre{
-  font-size: 10px;
-}
-</style>
 
 #### Easy wrapper
 
