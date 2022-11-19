@@ -1,3 +1,14 @@
+# Easy wrap
+# Characteristics of easy wrap
+# splits comment lines in space
+# splits code lines in comma
+# ignore lines with "if" when "{" absent
+
+perl easy_wrap.pl < long_lines.R 100 > long_lines_easy_wrap.R
+long_lines.R           input
+100                    desired length of line
+long_lines_easy_wrap.R output
+
 # Examples 1 to 5 explained
 
 # 1 modifies only CODE !!! (not comments)
@@ -55,7 +66,7 @@ perl wrapper.pl < long_lines.R $LENGTH ^^\(\(?\!\\bif\\b\).\)*$ ""      ", "    
 # 2 COMMENTS #'
 perl wrapper.pl < results__1.R $LENGTH ^\#\'\\s                 \#\'\\s " "                          > results__2.R
 # 4 COMMENTS #
-perl wrapper.pl < results__2.R $LENGTH \#\\s                    \#\\s   " "                          > final.R
+perl wrapper.pl < results__2.R $LENGTH \#\\s                    \#\\s   " "                          > final2.R
 
 
 
@@ -69,7 +80,7 @@ perl wrapper.pl < long_lines.R $LENGTH ^\#\'\\s                \#\'\\s " "
 # 4 COMMENTS #
 perl wrapper.pl < long_lines.R $LENGTH \#\\s                   \#\\s   " "
 # 5 CODE # don't modify lines when "if" word present !!!
-perl wrapper.pl < long_lines.R $LENGTH ^\(\(?\!\\bif\\b\).\)*$ ""      ", "      ^\(\(?\!\#\).\)*$
+perl wrapper.pl < long_lines.R $LENGTH ^\(\(?\!\\bif\\b\).\)*$ ""      ", "      ^\(\(?\!\#\).\)*$ > result.R
 
 
 
