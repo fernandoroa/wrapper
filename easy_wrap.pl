@@ -4,7 +4,7 @@ $max_length_o = $ARGV[0];                   # 1st idx 0 = length of line
 $hashtag = "\#";
 $hashtag_break_point = " ";
 foreach my $line ( <STDIN> ) {
-  ($prefix, $text) = ($line =~ /^(\W+)?(.*)/);
+  ($prefix, $text) = ($line =~ /^([\s\x27$hashtag]+)?(.*)/);
   $linebreak_prefix = "\n$prefix";  # \n is linebreak
   $break_point = ", ";
   $max_length = $max_length_o;
@@ -26,7 +26,7 @@ foreach my $line ( <STDIN> ) {
       $check = 1;
       # check if the line has the function string, to indent
       if ($line =~ "function\\(") {
-        ($fun_prefix, $text2) = ($line =~ /(.*?function)(.*)/);
+        ($fun_prefix, $text2) = ($line =~ /(.*?<- function)(.*)/);
         $fun_prefix_length = length($fun_prefix) + 1;
         $spaces = " " x $fun_prefix_length;
         $linebreak_prefix = "\n$prefix$spaces";  # \n is linebreak
@@ -38,7 +38,9 @@ foreach my $line ( <STDIN> ) {
   # check $check boolean and do changes
   if ($check =~ 1) {
     $r2 =~ s/\G.{0,$max_length}($break_point|.$)\K/$linebreak_prefix/gsem;
-    if(not($l_line == $max_length + $li_pre_length or length($r2) == $l_line + $li_pre_length) ) {
+    $l_r2 = length($r2);
+    if(not($l_line == $max_length + $li_pre_length or $l_r2 == $l_line + $li_pre_length) and 
+      $l_line > $max_length_o) {
       $line = $r2;
       $line =~ s/$linebreak_prefix$//;
     }
