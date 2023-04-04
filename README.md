@@ -18,6 +18,15 @@ Characteristics of easy wrap:
 
 <br>
 
+#### Fix box spacing
+
+Remove additional spaces around “/” in `box::use` calls
+
+    # Run in bash
+    bash fix_box_spacing.sh box_example.R box_example_2.R
+    # box_example.R           input
+    # box_example_2.R         output
+
 #### Manual wrapper
 
 Some Concatenated examples - printing to file:
