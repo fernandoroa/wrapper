@@ -6,5 +6,10 @@ perl -0777 -pe '
     $r
   }gsem' < $1 > ${tmpfile}
 
-cat ${tmpfile} > $2
+if [ -z "$2" ] ; then
+  cat ${tmpfile} > $1  
+else 
+  cat ${tmpfile} > $2
+fi
+
 rm -f ${tmpfile}
